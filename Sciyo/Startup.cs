@@ -25,10 +25,12 @@ namespace Sciyo
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationContext>(options => options.
-                UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                UseSqlServer(
+                    Configuration.GetConnectionString("DefaultConnection"), 
+                    builder => builder.MigrationsAssembly("Sciyo")));
 
             services.AddMvc();
-            
+
 
             // Add application services.
             services.AddTransient<IVideoRepository, VideoRepository>();
