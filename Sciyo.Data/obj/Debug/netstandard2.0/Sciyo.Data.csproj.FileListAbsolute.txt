@@ -1,0 +1,8 @@
+/Users/chunlin/ASP.NetProjects/CoreRepositoryDesignPatternDemo/Sciyo.Data/bin/Debug/netstandard2.0/Sciyo.Data.deps.json
+/Users/chunlin/ASP.NetProjects/CoreRepositoryDesignPatternDemo/Sciyo.Data/bin/Debug/netstandard2.0/Sciyo.Data.dll
+/Users/chunlin/ASP.NetProjects/CoreRepositoryDesignPatternDemo/Sciyo.Data/bin/Debug/netstandard2.0/Sciyo.Data.pdb
+/Users/chunlin/ASP.NetProjects/CoreRepositoryDesignPatternDemo/Sciyo.Data/obj/Debug/netstandard2.0/Sciyo.Data.csproj.CoreCompileInputs.cache
+/Users/chunlin/ASP.NetProjects/CoreRepositoryDesignPatternDemo/Sciyo.Data/obj/Debug/netstandard2.0/Sciyo.Data.AssemblyInfoInputs.cache
+/Users/chunlin/ASP.NetProjects/CoreRepositoryDesignPatternDemo/Sciyo.Data/obj/Debug/netstandard2.0/Sciyo.Data.AssemblyInfo.cs
+/Users/chunlin/ASP.NetProjects/CoreRepositoryDesignPatternDemo/Sciyo.Data/obj/Debug/netstandard2.0/Sciyo.Data.dll
+/Users/chunlin/ASP.NetProjects/CoreRepositoryDesignPatternDemo/Sciyo.Data/obj/Debug/netstandard2.0/Sciyo.Data.pdb

@@ -1,0 +1,12 @@
+/Users/chunlin/ASP.NetProjects/CoreRepositoryDesignPatternDemo/Sciyo/bin/Debug/netcoreapp2.0/Sciyo.deps.json
+/Users/chunlin/ASP.NetProjects/CoreRepositoryDesignPatternDemo/Sciyo/bin/Debug/netcoreapp2.0/Sciyo.runtimeconfig.json
+/Users/chunlin/ASP.NetProjects/CoreRepositoryDesignPatternDemo/Sciyo/bin/Debug/netcoreapp2.0/Sciyo.runtimeconfig.dev.json
+/Users/chunlin/ASP.NetProjects/CoreRepositoryDesignPatternDemo/Sciyo/bin/Debug/netcoreapp2.0/Sciyo.dll
+/Users/chunlin/ASP.NetProjects/CoreRepositoryDesignPatternDemo/Sciyo/bin/Debug/netcoreapp2.0/Sciyo.pdb
+/Users/chunlin/ASP.NetProjects/CoreRepositoryDesignPatternDemo/Sciyo/bin/Debug/netcoreapp2.0/Sciyo.Data.dll
+/Users/chunlin/ASP.NetProjects/CoreRepositoryDesignPatternDemo/Sciyo/bin/Debug/netcoreapp2.0/Sciyo.Data.pdb
+/Users/chunlin/ASP.NetProjects/CoreRepositoryDesignPatternDemo/Sciyo/obj/Debug/netcoreapp2.0/Sciyo.csproj.CoreCompileInputs.cache
+/Users/chunlin/ASP.NetProjects/CoreRepositoryDesignPatternDemo/Sciyo/obj/Debug/netcoreapp2.0/Sciyo.AssemblyInfoInputs.cache
+/Users/chunlin/ASP.NetProjects/CoreRepositoryDesignPatternDemo/Sciyo/obj/Debug/netcoreapp2.0/Sciyo.AssemblyInfo.cs
+/Users/chunlin/ASP.NetProjects/CoreRepositoryDesignPatternDemo/Sciyo/obj/Debug/netcoreapp2.0/Sciyo.dll
+/Users/chunlin/ASP.NetProjects/CoreRepositoryDesignPatternDemo/Sciyo/obj/Debug/netcoreapp2.0/Sciyo.pdb
