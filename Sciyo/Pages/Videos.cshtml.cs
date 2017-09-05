@@ -10,18 +10,18 @@ namespace Sciyo.Pages
 {
     public class VideoModel : PageModel
     {
-        private IVideoRepository videoRepository;
+        private readonly IVideoRepository _videoRepository;
 
         public VideoModel(IVideoRepository videoRepository)
         {
-            this.videoRepository = videoRepository;
+            _videoRepository = videoRepository;
         }
 
         public IEnumerable<VideoViewModel> Videos { get; set; }
 
         public void OnGet()
         {
-            Videos = videoRepository.GetAllVideos().Select(v => 
+            Videos = _videoRepository.GetAllVideos().Select(v => 
                 new VideoViewModel{
                     Name = v.Name,
                     YoutubeId = v.YoutubeId,
