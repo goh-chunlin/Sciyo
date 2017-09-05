@@ -28,6 +28,7 @@ namespace Sciyo
                 UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddMvc();
+            
 
             // Add application services.
             services.AddTransient<IVideoRepository, VideoRepository>();
