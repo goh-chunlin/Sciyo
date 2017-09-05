@@ -25,7 +25,7 @@ namespace Sciyo.Pages
                 new VideoViewModel{
                     Name = v.Name,
                     YoutubeId = v.YoutubeId,
-                    LengthInSecond = v.LengthInSeconds
+                    LengthInSecond = v.LengthInSecond
                 }
             );
         }
