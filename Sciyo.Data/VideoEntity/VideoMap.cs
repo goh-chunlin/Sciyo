@@ -10,7 +10,7 @@ namespace Sciyo.Data.VideoEntity
 			entityBuilder.HasKey(t => t.Id);
 			entityBuilder.Property(t => t.Name).IsRequired();
 			entityBuilder.Property(t => t.YoutubeId).IsRequired();
-			entityBuilder.Property(t => t.LengthInSeconds).IsRequired();
+			entityBuilder.Property(t => t.LengthInSecond).IsRequired();
 		}
     }
 }
