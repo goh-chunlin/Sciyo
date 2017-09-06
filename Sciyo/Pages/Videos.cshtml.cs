@@ -10,12 +10,12 @@ using Sciyo.Data;
 
 namespace Sciyo.Pages
 {
-    public class VideoModel : PageModel
+    public class VideosModel : PageModel
     {
         private readonly IRepository<Playlist> _repoPlaylist;
         private readonly IRepository<Video> _repoVideo;
 
-        public VideoModel(IRepository<Playlist> repoPlaylist, IRepository<Video> repoVideo)
+        public VideosModel(IRepository<Playlist> repoPlaylist, IRepository<Video> repoVideo)
         {
             _repoPlaylist = repoPlaylist;
             _repoVideo = repoVideo;

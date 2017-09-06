@@ -1,0 +1,30 @@
+﻿@page
+@model PlaylistsModel
+@{
+    ViewData["Title"] = "All Playlists";
+}
+<h2>@ViewData["Title"]</h2>
+
+<table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      @{ int counter = 1; }
+      @foreach(var playlist in Model.Playlists)
+      {
+        <tr>
+            <td>@counter</td>
+            <td>@playlist.Name</td>
+            <td>@playlist.Description</td>
+        </tr>
+
+        counter++;
+      }
+    
+  </tbody>
+</table> 
