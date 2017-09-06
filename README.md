@@ -22,3 +22,5 @@ A demo project about ASP .NET Core and Generic Repository Design Pattern
 - [ICollection vs IEnumerable](https://stackoverflow.com/a/10113331/1177328)
 - [services.AddTransient vs service.AddScope vs service.AddSingleton](https://stackoverflow.com/a/38139500/1177328)
 - [Book: Building Web Applications with Visual Studio 2017: Using .NET Core and JavaScript Frameworks](https://books.google.com.sg/books?id=NpwrDwAAQBAJ&pg=PA46&lpg=PA46#v=onepage&q&f=false)
+- [Make Git "Forgets" about File that was Tracked](https://stackoverflow.com/a/20241145/1177328)
+- [Removing Sensitive Data from a Repository](https://help.github.com/articles/removing-sensitive-data-from-a-repository/)
