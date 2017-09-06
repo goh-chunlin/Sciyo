@@ -12,6 +12,6 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Sciyo.Data\Sciyo.Data.csproj" />
+    <ProjectReference Include="..\Sciyo.Data\Sciyo.Data.csproj" Version="1.0.0-alpha" />
   </ItemGroup>
 </Project>

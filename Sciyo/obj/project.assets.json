@@ -4747,7 +4747,7 @@
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
       },
-      "Sciyo.Data/1.0.0": {
+      "Sciyo.Data/1.0.0-alpha": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -12538,7 +12538,7 @@
         "windowsazure.storage.nuspec"
       ]
     },
-    "Sciyo.Data/1.0.0": {
+    "Sciyo.Data/1.0.0-alpha": {
       "type": "project",
       "path": "../Sciyo.Data/Sciyo.Data.csproj",
       "msbuildProject": "../Sciyo.Data/Sciyo.Data.csproj"
@@ -12550,7 +12550,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 2.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 2.0.0",
       "Microsoft.NETCore.App >= 2.0.0",
-      "Sciyo.Data >= 1.0.0"
+      "Sciyo.Data >= 1.0.0-alpha"
     ]
   },
   "packageFolders": {

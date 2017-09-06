@@ -11,11 +11,11 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Sciyo.Data")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("GCL Project")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Package Description")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0-alpha")]
 [assembly: System.Reflection.AssemblyProductAttribute("Sciyo.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Sciyo.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

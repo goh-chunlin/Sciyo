@@ -2383,7 +2383,7 @@
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.0",
+    "version": "1.0.0-alpha",
     "restore": {
       "projectUniqueName": "/Users/chunlin/ASP.NetProjects/CoreRepositoryDesignPatternDemo/Sciyo.Data/Sciyo.Data.csproj",
       "projectName": "Sciyo.Data",

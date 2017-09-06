@@ -4,30 +4,34 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Sciyo.Data.VideoEntity;
+using Sciyo.Data.PlaylistEntity;
 using Sciyo.Models;
+using Sciyo.Data;
 
 namespace Sciyo.Pages
 {
     public class VideoModel : PageModel
     {
-        private readonly IVideoRepository _videoRepository;
+        private readonly IRepository<Playlist> _repoPlaylist;
+        private readonly IRepository<Video> _repoVideo;
 
-        public VideoModel(IVideoRepository videoRepository)
+        public VideoModel(IRepository<Playlist> repoPlaylist, IRepository<Video> repoVideo)
         {
-            _videoRepository = videoRepository;
+            _repoPlaylist = repoPlaylist;
+            _repoVideo = repoVideo;
         }
 
         public IEnumerable<VideoViewModel> Videos { get; set; }
 
         public void OnGet()
         {
-            Videos = _videoRepository.GetAllVideos().Select(v => 
+            Videos = _repoVideo.GetAll().Select(v => 
                 new VideoViewModel{
                     Name = v.Name,
                     YoutubeId = v.YoutubeId,
                     LengthInSecond = v.LengthInSecond
                 }
-            );
+            ).ToList();
         }
     }
 }

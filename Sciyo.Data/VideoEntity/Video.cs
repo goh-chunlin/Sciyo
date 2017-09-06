@@ -1,4 +1,5 @@
 using System;
+using Sciyo.Data.PlaylistEntity;
 
 namespace Sciyo.Data.VideoEntity
 {
@@ -9,5 +10,8 @@ namespace Sciyo.Data.VideoEntity
 		public string YoutubeId { get; set; }
 
 		public int LengthInSecond { get; set; }
+
+        public Int64 PlaylistId { get; set; }
+        public virtual Playlist Playlist { get; set; }
     }
 }

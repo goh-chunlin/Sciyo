@@ -11,6 +11,7 @@ namespace Sciyo.Data.VideoEntity
 			entityBuilder.Property(t => t.Name).IsRequired();
 			entityBuilder.Property(t => t.YoutubeId).IsRequired();
 			entityBuilder.Property(t => t.LengthInSecond).IsRequired();
+			entityBuilder.HasOne(t => t.Playlist).WithMany(e => e.Videos).HasForeignKey(t => t.PlaylistId);
 		}
     }
 }

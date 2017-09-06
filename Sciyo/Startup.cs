@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Sciyo.Data;
+using Sciyo.Data.PlaylistEntity;
 using Sciyo.Data.VideoEntity;
 
 namespace Sciyo
@@ -33,7 +34,7 @@ namespace Sciyo
 
 
             // Add application services.
-            services.AddTransient<IVideoRepository, VideoRepository>();
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

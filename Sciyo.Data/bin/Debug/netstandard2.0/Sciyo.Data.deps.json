@@ -7,7 +7,7 @@
   "targets": {
     ".NETStandard,Version=v2.0": {},
     ".NETStandard,Version=v2.0/": {
-      "Sciyo.Data/1.0.0": {
+      "Sciyo.Data/1.0.0-alpha": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "2.0.0",
           "NETStandard.Library": "2.0.0"
@@ -370,7 +370,7 @@
     }
   },
   "libraries": {
-    "Sciyo.Data/1.0.0": {
+    "Sciyo.Data/1.0.0-alpha": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
