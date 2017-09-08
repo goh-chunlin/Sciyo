@@ -1,12 +1,17 @@
 using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Tokens;
 using Sciyo.Data;
 using Sciyo.Data.PlaylistEntity;
 using Sciyo.Data.VideoEntity;
@@ -30,8 +35,31 @@ namespace Sciyo
                     Configuration.GetConnectionString("DefaultConnection"), 
                     builder => builder.MigrationsAssembly("Sciyo")));
 
-            services.AddMvc();
+            JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
 
+            services.AddAuthentication(option =>
+            {
+                option.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                option.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme;
+            })
+            .AddCookie(o => o.LoginPath = new PathString("/signin-oidc"))
+            .AddOpenIdConnect(options =>
+            {
+                options.ClientId = Configuration["AppSettings:GclIdentityServerClientId"];
+                //options.ClientSecret = Configuration["AppSettings:GclIdentityServerClientSecret"];
+                options.Authority = Configuration["AppSettings:GclIdentityServerUrl"];
+                //options.ResponseType = "code id_token";
+                // options.Scope.Add("openid");
+                // options.Scope.Add("profile");
+                // options.Scope.Add("api1");
+                options.SignInScheme = "Cookies";
+                //options.GetClaimsFromUserInfoEndpoint = true;
+                options.RequireHttpsMetadata = false;
+                options.SaveTokens = true;
+
+            });
+
+            services.AddMvc();
 
             // Add application services.
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
@@ -50,6 +78,8 @@ namespace Sciyo
             }
 
             app.UseStaticFiles();
+
+            app.UseAuthentication();
 
             app.UseMvc(routes =>
             {

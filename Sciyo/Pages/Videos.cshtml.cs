@@ -7,9 +7,11 @@ using Sciyo.Data.VideoEntity;
 using Sciyo.Data.PlaylistEntity;
 using Sciyo.Models;
 using Sciyo.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Sciyo.Pages
 {
+    [Authorize]
     public class VideosModel : PageModel
     {
         private readonly IRepository<Playlist> _repoPlaylist;
