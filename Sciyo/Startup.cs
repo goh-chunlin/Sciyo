@@ -39,24 +39,23 @@ namespace Sciyo
 
             services.AddAuthentication(option =>
             {
-                option.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                option.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
                 option.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme;
+                option.DefaultAuthenticateScheme = OpenIdConnectDefaults.AuthenticationScheme;
             })
-            .AddCookie(o => o.LoginPath = new PathString("/signin-oidc"))
+            .AddCookie()
             .AddOpenIdConnect(options =>
             {
                 options.ClientId = Configuration["AppSettings:GclIdentityServerClientId"];
-                //options.ClientSecret = Configuration["AppSettings:GclIdentityServerClientSecret"];
+                options.ClientSecret = Configuration["AppSettings:GclIdentityServerClientSecret"];
                 options.Authority = Configuration["AppSettings:GclIdentityServerUrl"];
-                //options.ResponseType = "code id_token";
-                // options.Scope.Add("openid");
-                // options.Scope.Add("profile");
-                // options.Scope.Add("api1");
-                options.SignInScheme = "Cookies";
-                //options.GetClaimsFromUserInfoEndpoint = true;
                 options.RequireHttpsMetadata = false;
-                options.SaveTokens = true;
 
+                options.ResponseType = "code id_token";
+
+                options.Scope.Add("openid");
+                options.Scope.Add("profile");
+                options.Scope.Add("api1");
             });
 
             services.AddMvc();
