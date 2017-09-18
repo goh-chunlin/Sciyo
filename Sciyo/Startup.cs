@@ -58,7 +58,7 @@ namespace Sciyo
                 options.Scope.Add("api1");
                 options.Events  = new OpenIdConnectEvents {
                     OnRemoteFailure = context => {
-                        context.Response.Redirect("/");
+                        context.Response.Redirect("/Error");
                         context.HandleResponse();
 
                         return Task.FromResult(0);
