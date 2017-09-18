@@ -56,6 +56,14 @@ namespace Sciyo
                 options.Scope.Add("openid");
                 options.Scope.Add("profile");
                 options.Scope.Add("api1");
+                options.Events  = new OpenIdConnectEvents {
+                    OnRemoteFailure = context => {
+                        context.Response.Redirect("/");
+                        context.HandleResponse();
+
+                        return Task.FromResult(0);
+                    }
+                };
             });
 
             services.AddMvc();
